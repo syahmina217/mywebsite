@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+  .floating-audio {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: pink;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .floating-audio audio {
+    outline: none;
+  }
+
+  .floating-audio audio::-webkit-media-controls-play-button,
+  .floating-audio audio::-webkit-media-controls-pause-button,
+  .floating-audio audio::-webkit-media-controls-volume-slider {
+    background-color: pink !important;
+    color: white;
+  }
+
+  .floating-audio audio::-moz-volume-slider {
+    background-color: pink !important;
+  }
+.floating-cat {
+      position: fixed;
+      left: 10px;
+      bottom: 20px;
+      width: 500px;
+      height: auto;
+      border-radius: 10%;
+      z-index: 1000;
+    }
+.just-me-again-down-here-regular {
+  font-family: "Just Me Again Down Here", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+

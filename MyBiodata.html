@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="biodata.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
+<title>Biodata</title>
+<style>
+		margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+	/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+	
+	.container {
+  position: relative;
+  width: 50%;
+  font-family: "Just Me Again Down Here";
+  src: url("path/to/JustMeAgainDownHere-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+</style>
+</head>
+
+<body style="background-image: url('meow.jpg'); background-size: contain; background-position: center; background-repeat: repeat; min-height: 100vh; margin: 0;">
+
+<div class="topnav">
+	
+  <a href="Homepage.html">
+  <i class="bi bi-house"></i>
+</a>
+
+  <a href="MyPortfolio.html">My Portfolio</a>
+  <a href="MyVideo.html">My Video</a>
+  <a href="YourComment.html">Your Comments</a>
+</div>
+	
+	<div class="container" style="display: flex; justify-content: center; align-items: center; margin: 20px auto;">
+  <img src="mina1.jpg" alt="Avatar" class="image" style="margin-right: 20px; width: 40%; height: 400px; object-fit: cover; border-radius: 10%; border:20px solid white;">
+
+  <div style="position: relative; display: inline-block; width: 60%; height: 400px;">
+    <img src="notes1.png" alt="Avatar" class="image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10%;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black; font-size: 28px; text-align: center; width: 90%; padding: 55px; box-sizing: border-box;">
+      My name is Norsyahmina, and I am currently a third-year student at University Malaysia Sabah, Kampus Antarabangsa Labuan.
+    </div>
+  </div>
+</div>
+
+<div class="container" style="display: flex; justify-content: center; align-items: center; margin: 20px auto;">
+  <img src="mina2.jpg" alt="Avatar" class="image" style="margin-right: 20px; width: 40%; height: 400px; object-fit: cover; border-radius: 10%; border:20px solid white;">
+
+  <div style="position: relative; display: inline-block; width: 60%; height: 400px;">
+    <img src="notes1.png" alt="Avatar" class="image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10%;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black; font-size: 30px; text-align: center; width: 90%; padding: 55px; box-sizing: border-box;">
+      I am the youngest in my family (not a baby yet my parents still treat me one).
+    </div>
+  </div>
+</div>
+
+<div class="container" style="display: flex; justify-content: center; align-items: center; margin: 20px auto;">
+  <img src="mina3.jpg" alt="Avatar" class="image" style="margin-right: 20px; width: 40%; height: 400px; object-fit: cover; border-radius: 10%; border:20px solid white;">
+
+  <div style="position: relative; display: inline-block; width: 60%; height: 400px;">
+    <img src="notes1.png" alt="Avatar" class="image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10%;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black; font-size: 25px; text-align: center; width: 90%; padding: 55px; box-sizing: border-box;">
+      "Im turning 25 in the next of 21st of July 2025, its an honor to get to meet UMSKAL, fun yet precious memories to be made and tons for it to go!"
+    </div>
+  </div>
+</div>
+	
+	<div>
+		<img src="cat.gif" class="floating-cat" alt="Animated Gif" style="position: absolute; left: 0; margin-left: 10px; width: 200px; height: auto; border-radius: 10%;">
+	</div>
+
+<div class="floating-audio">
+  <audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+
+
+</body>
+</html>

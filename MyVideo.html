@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="Video.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<title>MyVideo</title>
+<style>
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+	
+}/*Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+</style>
+</head>
+
+<body style="background-image: url('back5.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; margin: 0; background-attachment: fixed;">
+<div class="topnav">
+    <a href="Homepage.html"><i class="bi bi-house"></i></a>
+    <a href="MyPortfolio.html">My Portfolio</a>
+    <a href="MyBiodata.html">My Biodata</a>
+    <a href="YourComment.html">Your Comments</a>
+  </div>
+	
+<div class="video-container">
+  <div class="video-frame">
+    <video id="customVideo" class="video-background" controls playsinline>
+      <source src="videores.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-controls">
+      <button id="playPauseBtn">Play</button>
+      <button id="volumeHighBtn">High Volume</button>
+    </div>
+  </div>
+</div>
+	
+	<div>
+		<img src="butter.gif" alt="Right Banner" class="banner-gif-right" width="100" height="200">
+	</div>
+	<div class="left-banner">
+	  <img src="butter.gif" alt="Left Banner" class="banner-gif-left" width="100" height="200">
+	</div>
+
+
+<script>
+	const video = document.getElementById('customVideo');
+	const playPauseBtn = document.getElementById('playPauseBtn');
+	const volumeHighBtn = document.getElementById('volumeHighBtn');
+
+	playPauseBtn.addEventListener('click', () => {
+	  if (video.paused) {
+		video.play();
+		playPauseBtn.textContent = 'Pause';
+	  } else {
+		video.pause();
+		playPauseBtn.textContent = 'Play';
+	  }
+	});
+
+	volumeHighBtn.addEventListener('click', () => {
+	  video.volume = 1.0; // Sets the volume to maximum (100%)
+	  alert('Volume set to high!'); // Optional: shows an alert when volume is set to high
+	});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+.video-container {
+  position: relative;
+  width: 750px; /* Adjust as needed */
+  margin-top: 30px;
+  margin-left: 180px;
+}
+
+.video-frame {
+  position: relative;
+  border: 4px solid pink; /* Pink border for the video frame */
+  border-radius: 8px; /* Optional rounded corners */
+  overflow: hidden;
+}
+
+.video-background {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+}
+
+#playPauseBtn, #volumeHighBtn {
+  background: pink;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.left-banner {
+  position: absolute;
+  left: 0; /* Positions it to the left edge */
+  top: 0; /* Optional: Adjust vertical position if needed */
+  margin-left: 1400px; /* Adds some margin for spacing */
+}
+
+.banner-gif-left {
+  display: block;
+}
+
