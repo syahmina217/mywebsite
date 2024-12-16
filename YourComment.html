@@ -144,45 +144,95 @@ body, html {
 
 </div>
 </div>
+	<div>
+	  <object id="EdgeID" type="text/html" width="1000" height="740" data-dw-widget="Edge" data="animation_assets/font/Assets/font.html">
+	  </object>
+    </div>
 <script>
- document.getElementById('submitBtn').addEventListener('click', function () {
-  const name = document.getElementById('nameInput').value.trim();
-  const comment = document.getElementById('commentInput').value.trim();
-  
-  if (name && comment) {
-    const commentBlock = document.createElement('div');
-    commentBlock.classList.add('be-comment');
-
-    commentBlock.innerHTML = `
-      <div class="be-img-comment">	
-        <a href="#">
-          <img src="people.png" alt="" class="be-ava-comment">
-        </a>
-      </div>
-      <div class="be-comment-content">
-        <span class="be-comment-name">
-          <a href="#">${name}</a>
-        </span>
-        <span class="be-comment-time">
-          <i class="fa fa-clock-o"></i> Just now
-        </span>
-        <p class="be-comment-text">${comment}</p>
-      </div>
-    `;
-
-    // Prepend the new comment to the top of the comment block
+  // Function to load comments from localStorage
+  function loadComments() {
+    const savedComments = JSON.parse(localStorage.getItem('comments')) || [];
     const commentSection = document.querySelector('.be-comment-block');
-    commentSection.insertBefore(commentBlock, commentSection.firstChild);
 
-    // Clear input fields
-    document.getElementById('nameInput').value = '';
-    document.getElementById('emailInput').value = '';
-    document.getElementById('commentInput').value = '';
-  } else {
-    alert('Please enter both your name and a comment.');
+    savedComments.forEach(comment => {
+      const commentBlock = document.createElement('div');
+      commentBlock.classList.add('be-comment');
+      commentBlock.innerHTML = `
+        <div class="be-img-comment">	
+          <a href="#">
+            <img src="people.png" alt="" class="be-ava-comment">
+          </a>
+        </div>
+        <div class="be-comment-content">
+          <span class="be-comment-name">
+            <a href="#">${comment.name}</a>
+          </span>
+          <span class="be-comment-time">
+            <i class="fa fa-clock-o"></i> ${comment.time}
+          </span>
+          <p class="be-comment-text">${comment.text}</p>
+        </div>
+      `;
+      commentSection.insertBefore(commentBlock, commentSection.lastElementChild);
+    });
   }
-});
 
+  // Function to save a new comment
+  function saveComment(name, commentText) {
+    const savedComments = JSON.parse(localStorage.getItem('comments')) || [];
+    const newComment = {
+      name: name,
+      text: commentText,
+      time: new Date().toLocaleString()
+    };
+    savedComments.unshift(newComment); // Add to the beginning of the array
+    localStorage.setItem('comments', JSON.stringify(savedComments));
+  }
+
+  // Event listener for the submit button
+  document.getElementById('submitBtn').addEventListener('click', function () {
+    const name = document.getElementById('nameInput').value.trim();
+    const comment = document.getElementById('commentInput').value.trim();
+
+    if (name && comment) {
+      // Add the comment to the DOM
+      const commentBlock = document.createElement('div');
+      commentBlock.classList.add('be-comment');
+      commentBlock.innerHTML = `
+        <div class="be-img-comment">	
+          <a href="#">
+            <img src="people.png" alt="" class="be-ava-comment">
+          </a>
+        </div>
+        <div class="be-comment-content">
+          <span class="be-comment-name">
+            <a href="#">${name}</a>
+          </span>
+          <span class="be-comment-time">
+            <i class="fa fa-clock-o"></i> Just now
+          </span>
+          <p class="be-comment-text">${comment}</p>
+        </div>
+      `;
+
+      const commentSection = document.querySelector('.be-comment-block');
+      commentSection.insertBefore(commentBlock, commentSection.lastElementChild);
+
+      // Save the comment to localStorage
+      saveComment(name, comment);
+
+      // Clear input fields
+      document.getElementById('nameInput').value = '';
+      document.getElementById('emailInput').value = '';
+      document.getElementById('commentInput').value = '';
+    } else {
+      alert('Please enter both your name and a comment.');
+    }
+  });
+
+  // Load comments when the page is loaded
+  document.addEventListener('DOMContentLoaded', loadComments);
 </script>
+
 </body>
 </html>
