@@ -1,8 +1,12 @@
 @charset "utf-8";
 /* CSS Document */
-body{
-    margin-top:20px;
-    background-image: url("back7.jpg");
+body {
+    margin-top: 20px;
+    background-image: url("bg1.jpg");
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    background-attachment: fixed; /* Makes the background fixed during scroll */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the background image */
 }
 
 .be-comment-block {
@@ -69,7 +73,7 @@ body{
     line-height: 18px;
     color: black;
     display: block;
-    background: #73c2fb;
+    background: #FFC0CB;
     border: 1px solid #edeff2;
     padding: 15px 20px 20px 20px;
 }
