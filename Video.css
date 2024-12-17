@@ -49,3 +49,28 @@
   display: block;
 }
 
+.info-table {
+  border-collapse: collapse; /* Remove space between table cells */
+  background-color: rgba(255, 182, 193, 0.8); /* Soft pink with 80% opacity */
+  width: 90%; /* Ensure the table fits within the layout */
+  max-width: 800px; /* Optional: limit the table width */
+  font-family: "Just Me Again Down Here", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px; /* Increase font size */
+}
+
+.info-table th, .info-table td {
+  border: 2px solid #fff; /* White border for table cells */
+  padding: 10px; /* Add padding for better readability */
+  text-align: left; /* Align text to the left */
+  background-color: rgba(255, 182, 193, 0.8); /* Soft pink with slight transparency for table cells */
+  font-family: "Just Me Again Down Here", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px; /* Increase font size */
+}
+
+
+
+
