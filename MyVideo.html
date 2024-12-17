@@ -1,9 +1,14 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="Video.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
+	
 <title>MyVideo</title>
 <style>
 /* Style the header */
@@ -56,15 +61,39 @@
     </div>
   </div>
 </div>
-	
-	<div>
-		<img src="butter.gif" alt="Right Banner" class="banner-gif-right" width="100" height="200">
-	</div>
 	<div class="left-banner">
 	  <img src="butter.gif" alt="Left Banner" class="banner-gif-left" width="100" height="200">
 	</div>
-
-
+	<div style="display: flex; justify-content: space-between; align-items: flex-end;">
+  <!-- Table Section with margin-left -->
+  <table class="info-table" style="border: 1px solid black; margin-left: 150px; margin-top: 20px; margin-bottom: 30px;">
+    <tr>
+      <th>Hobbies</th>
+      <th>Ambition</th>
+      <th>Likes</th>
+      <th>Dislikes</th>
+    </tr>
+    <tr>
+      <td>Playing games</td>
+      <td>Programmer</td>
+      <td>Watching horror movies</td>
+      <td>Hated sayur peria (bitter)</td>
+    </tr>
+    <tr>
+      <td>Singing</td>
+      <td>Educator</td>
+      <td>Go to the beach</td>
+      <td>Phobia with blood</td>
+    </tr>
+    <tr>
+      <td>Drawing</td>
+      <td>Graphic Designer</td>
+      <td>Hangout with family</td>
+      <td>Not a doctor type</td>
+    </tr>
+  </table>
+</div>
+	
 <script>
 	const video = document.getElementById('customVideo');
 	const playPauseBtn = document.getElementById('playPauseBtn');
